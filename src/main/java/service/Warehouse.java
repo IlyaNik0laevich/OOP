@@ -42,7 +42,7 @@ public class Warehouse {
 
         return stock.getOrDefault(product, List.of()).stream()
                 .filter(batch -> !isNotExpired(batch, date))
-                .toList(); // Возвращает неизменяемый список (Java 16+)
+                .toList(); // Возвращает неизменяемый список
     }
 
     /**
